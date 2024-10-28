@@ -1,15 +1,15 @@
 import { useState, useEffect } from 'react';
 import './Carousel.css'
-import BLUE_BANNER from '../../assets/bluebanner.png'
-import SECOND_BANNER from '../../assets/second_banner.png'
+import BANNER from '../../assets/banner_1920.png'
+import BANNER_SUMMER from '../../assets/banner_summer.png'
+
 
 const Carousel = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const images = [
-        BLUE_BANNER,
-        SECOND_BANNER,
-        BLUE_BANNER
+        BANNER,
+        BANNER_SUMMER
     ]
 
     useEffect(() => {
@@ -24,15 +24,14 @@ const Carousel = () => {
 
       return (
         <div className="carousel">
-        <div
-          className="carousel-inner"
-          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-        >
-          {images.map((image, index) => (
+        <div className="carousel-inner" style={{ transform: `translateX(-${currentIndex * 100}%)` }} >
+          {
+          images.map((image, index) => (
             <div className="carousel-item" key={index}>
               <img src={image} alt={`Slide ${index + 1}`} />
             </div>
-          ))}
+          ))
+          }
         </div>
       </div>
       )
