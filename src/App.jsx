@@ -1,15 +1,17 @@
 import './App.css'
-import WebsiteLayout from "./layout/WebsiteLayout"
 import Carousel from './components/carousel/Carousel'
-
+import Header from './components/header/Header'
+import Footer from './components/footer/Footer'
+import Services from './components/services/Services'
 
 function App() {
 
   return (
     <>
-        <WebsiteLayout>
-            <Carousel />
-        </WebsiteLayout>
+      <Header />
+      <Carousel />
+      <Services />
+      <Footer/>
     </>
   )
 }
