@@ -3,9 +3,9 @@ import './Navbar.css'
 
 const pages = [
     {name: 'Inicio', href: '/'},
-    {name: 'Productos', href: '/products'},
+    {name: 'Servicios', href: '/services'},
+    {name: 'Nosotros', href: '/aboutus'},
     {name: 'Contacto', href: '/contact'},
-    {name: 'Carrito', href: '/cart'}
 ];
 
 
