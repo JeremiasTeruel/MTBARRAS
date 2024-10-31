@@ -1,0 +1,39 @@
+.services_container{
+    width: 80vw;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 0 auto;
+}
+
+.cards_container{ 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.service_card{
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid rgba(110, 110, 110, 0.521);
+    border-radius: 10px;
+}
+
+
+.card_img{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.service_description{
+    text-align: center;
+    /* height: 15%; */
+    width: 80%;
+}
