@@ -1,9 +1,13 @@
 import './Footer.css'
+import LOGO from '../../assets/logo_transparente.png'
+
 
 export default function Footer () {
     return (
         <>
-            <h1>footer</h1>
+            <div className='logo_container'>
+                <img src={LOGO} alt="logo" className='logo_footer'/>
+            </div>
         </>
     )
 }
