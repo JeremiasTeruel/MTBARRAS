@@ -2,10 +2,10 @@ import './Navbar.css'
 
 
 const pages = [
-    {name: 'Inicio', href: '/'},
-    {name: 'Servicios', href: '/services'},
-    {name: 'Nosotros', href: '/aboutus'},
-    {name: 'Contacto', href: '/contact'},
+    {name: 'Inicio', href: '#'},
+    {name: 'Servicios', href: '#services'},
+    {name: 'Nosotros', href: '#aboutus'},
+    {name: 'Contacto', href: '#contact'},
 ];
 
 
