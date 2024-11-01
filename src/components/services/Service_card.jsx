@@ -8,7 +8,7 @@ const Service_card = (props) => {
   return (
     <div key={id} className='service_card'>
         <img src={image} alt="service img" className='card_img' />
-        <strong className='service_description'>{description}</strong>
+        <p className='service_description'>{description}</p>
     </div>
   )
 }
