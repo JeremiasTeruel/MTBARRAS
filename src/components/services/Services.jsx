@@ -8,13 +8,13 @@ const Services = () => {
 
     const service = [
         {id: '1', image: servicio_basico, description: 'Este es el servicio basico de MT BARRAS'},
-        {id: '2', image: servicio_avanzado, description: 'Este es el servicio avanzazdo de MT BARRAS'},
+        {id: '2', image: servicio_avanzado, description: 'Este es el servicio avanzado de MT BARRAS'},
         {id: '3', image: servicio_personalizado, description: 'Este es el servicio personalizado de MT BARRAS'}
     ]
 
 
   return (
-    <section className='services_container'>
+    <section id='services' className='services_container'>
         <h1>Nuestros Servicios</h1>
 
         <div className='cards_container'>
