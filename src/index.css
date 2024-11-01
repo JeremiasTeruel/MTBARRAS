@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Itim&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +8,10 @@
   outline: 0;
   list-style: none;
   text-decoration: none;
+  font-family: "Itim", cursive;
+  font-weight: 500;
+  font-style: normal;
+  font-size: large;
 }
 
 :root {
