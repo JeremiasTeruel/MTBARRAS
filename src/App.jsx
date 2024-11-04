@@ -5,6 +5,7 @@ import Footer from './components/footer/Footer'
 import Services from './components/services/Services'
 import AboutUs from './components/aboutus/AboutUs'
 import Contact from './components/contact/Contact'
+import ScrollToTop from './components/scrolltotop/ScrollToTop'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <Services />
       <Contact />
       <Footer/>
+      <ScrollToTop />
     </>
   )
 }

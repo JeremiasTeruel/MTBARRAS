@@ -1,3 +1,43 @@
-.logo_footer{
+.footer{
     height: 15vh;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.socials_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer_socials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.social_anchor{
+    color: black;
+    font-size: 1.2rem;
+}
+
+.social_anchor:hover{
+    color: black;
+}
+
+
+.logo_footer{
+    height: 10vh;
+}
+
+.logo_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
