@@ -9,3 +9,18 @@
 .about_container h1{
     margin-bottom: 20px;
 }
+
+
+@media screen and (max-width: 500px) {
+    .about_container{
+        padding: 20px;
+    }
+
+    .about_container h1{
+        font-size: 2em;
+    }
+
+    .about_container strong{
+        font-size:medium;
+    }
+}
