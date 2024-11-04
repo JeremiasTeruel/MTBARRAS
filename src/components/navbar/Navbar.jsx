@@ -1,4 +1,6 @@
 import './Navbar.css'
+import { useState } from 'react'
+import { RxHamburgerMenu } from "react-icons/rx";
 
 
 const pages = [
@@ -10,15 +12,26 @@ const pages = [
 
 
 export default function Navbar () {
+
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+      };
+
+
     return (
-        <nav>
-            {
-                pages.map(item => 
-                    <a key={item.name} href={item.href} className='navbar-links'>
-                        {item.name}
-                    </a>
-                    )
-            }
-        </nav>
+        <>
+            <button className="menu-toggle" id="menuToggle" onClick={toggleMenu}><RxHamburgerMenu /></button> 
+            <nav className={`sidebar ${menuOpen ? 'open' : ''}`}>
+                {
+                    pages.map(item => 
+                        <a key={item.name} href={item.href} className='navbar-links'>
+                            {item.name}
+                        </a>
+                        )
+                }
+            </nav>
+        </>
     )
 }

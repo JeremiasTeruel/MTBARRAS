@@ -37,3 +37,14 @@
     /* height: 15%; */
     width: 80%;
 }
+
+
+@media screen and (max-width: 500px) {
+    .cards_container{
+        grid-template-columns: 1fr;
+    }
+
+    .services_container h1{
+        font-size: 2em;
+    }
+}

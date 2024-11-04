@@ -21,10 +21,7 @@ export default function Footer () {
             </div>
 
             <div className='logo_container'>
-                <small>
-                    MT BARRAS
-                </small>
-                <p>|</p>
+                <small>MT BARRAS |</small>
                 {año}
                 <a href="#">
                     <img src={LOGO} alt="logo" className='logo_footer'/>
