@@ -15,7 +15,7 @@
 }
 
 .service_card{
-    /* height: 100vh; */
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,8 +23,13 @@
     gap: 1rem;
     border: 1px solid rgba(110, 110, 110, 0.521);
     border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
 }
 
+.service_card:hover {
+    transform: scale(1.05);
+}
 
 .card_img{
     height: 100%;
@@ -33,11 +38,21 @@
 }
 
 .service_description{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
     text-align: center;
-    /* height: 15%; */
-    width: 80%;
+    padding: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
+.service_card:hover .service_description{
+    opacity: 1;
+}
 
 @media screen and (max-width: 500px) {
     .cards_container{
