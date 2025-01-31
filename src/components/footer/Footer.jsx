@@ -16,7 +16,7 @@ export default function Footer () {
                 <small>Nuestras redes: </small>
                 <div className='footer_socials'>
                     <a href='https://www.instagram.com/mt_barras/' className='social_anchor'><BsInstagram /></a>
-                    <a href='https://www.facebook.com/jere.teruel/' className='social_anchor'><FaFacebookF/></a>
+                    <a href='https://www.facebook.com/mtbarras.moviles' className='social_anchor'><FaFacebookF/></a>
                 </div>
             </div>
 
