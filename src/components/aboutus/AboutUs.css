@@ -2,21 +2,26 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-self: center;
+    justify-self: center;
     align-items: center;
     padding: 50px;
-    /* max-width: 100px; */
+    /*border: solid 10px #242424;*/
+    /*max-width: 90%;*/
 }
 
 .about_container h1{
     margin-bottom: 20px;
+
 }
 
 .about_container p{
     width: 50em;
+    max-width: 85%;
 }
 
 .img_container {
-    /* width: 80%; */
+     width: 80%;
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -28,12 +33,22 @@
 .img_container img{
     height: 300px;
     border-radius: 10px;
+    max-width: 100%;
 }
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 770px) {
     .about_container{
         padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+    }
+
+    .about_container p{
+        height: 70%;
+        padding: 99px;
     }
 
     .about_container h1{

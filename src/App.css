@@ -1,5 +1,8 @@
 body {
   min-height: 100vh;
   width: 100vw;
-  gap: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 7%;
 }
