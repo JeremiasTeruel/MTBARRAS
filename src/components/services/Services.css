@@ -1,48 +1,59 @@
-.services_container{
-    width: 80vw;
-    display: grid;
+.services_container {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
     justify-items: center;
     align-items: center;
     gap: 2rem;
     margin: 0 auto;
+    padding: 2rem 0;
 }
 
-.cards_container{ 
+.services_container h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.cards_container { 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
-    gap: 1rem;
+    gap: 1.5rem;
+    width: 100%;
 }
 
-.service_card{
+.service_card {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    border: 1px solid rgba(110, 110, 110, 0.521);
-    border-radius: 10px;
+    border: 1px solid rgba(110, 110, 110, 0.3);
+    border-radius: 12px;
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
+    aspect-ratio: 4/3;
 }
 
 .service_card:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
-.card_img{
+.card_img {
     height: 100%;
     width: 100%;
-    border-radius: 10px;
+    object-fit: cover;
+    border-radius: 12px;
 }
 
-.service_description{
+.service_description {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.75);
     color: white;
     text-align: center;
     padding: 1rem;
@@ -50,16 +61,45 @@
     transition: opacity 0.3s ease-in-out;
 }
 
-.service_card:hover .service_description{
+.service_card:hover .service_description {
     opacity: 1;
 }
 
-@media screen and (max-width: 500px) {
-    .cards_container{
-        grid-template-columns: 1fr;
+/* Tablet styles */
+@media screen and (max-width: 900px) {
+    .services_container h1 {
+        font-size: 2rem;
     }
 
-    .services_container h1{
-        font-size: 2em;
+    .cards_container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+/* Mobile styles */
+@media screen and (max-width: 600px) {
+    .services_container {
+        width: 95%;
+        padding: 1rem 0;
+    }
+
+    .services_container h1 {
+        font-size: 1.8rem;
+    }
+
+    .cards_container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .service_card {
+        aspect-ratio: 16/10;
+    }
+
+    .service_description {
+        opacity: 1;
+        padding: 0.8rem;
+        font-size: 0.9rem;
     }
 }
