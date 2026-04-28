@@ -1,67 +1,139 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Itim&display=swap');
 
-nav {
-    width: 50vw;
+.navbar {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    gap: 2rem;
 }
 
-.navbar-links{
+.navbar-links {
     color: #242424;
     font-family: "Itim", cursive;
     font-weight: 500;
     font-style: normal;
     font-size: large;
-    transition: .5s;
+    transition: all 0.3s ease-in-out;
+    padding: 0.5rem 1rem;
 }
 
-.navbar-links:hover{
+.header-scrolled .navbar-links {
+    font-size: 0.9rem;
+}
+
+.navbar-links:hover {
     color: black;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
 .menu-toggle {
     display: none;
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    color: black;
+    background: rgba(0, 0, 0, 0.1);
+    color: #242424;
     border: none;
-    border-radius: 10px;
-    padding: 10px 15px;
+    border-radius: 8px;
+    padding: 10px 12px;
     cursor: pointer;
-    z-index: 1;
-    transition: left 0.3s ease;
-  }
+    z-index: 1001;
+    transition: all 0.3s ease;
+    font-size: 1.5rem;
+}
 
-  .menu-toggle:focus {
+.menu-toggle:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.menu-toggle:focus {
     outline: none;
-  }
+}
 
+.menu-overlay {
+    display: none;
+}
 
-  @media screen and (max-width: 800px){
-    .sidebar{
-        width: 100vw;
-        transform: translateX(-100%);
+/* Tablet styles */
+@media screen and (max-width: 900px) {
+    .navbar {
+        gap: 1rem;
     }
     
-    .sidebar.open {
-        transform: translateX(0);
-    }
-    
-    .menu-toggle {
-    display: block;
-    position: fixed;
-    z-index: 999;
-    }
-
-    .navbar-links{
-        display: none;
+    .navbar-links {
+        font-size: medium;
+        padding: 0.4rem 0.8rem;
     }
 }
 
-@media screen and (max-width: 500px){
-    .sidebar {
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        z-index: 1001;
+    }
+
+    .menu-overlay {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        max-width: 300px;
+        height: 100vh;
+        background: #e4e4e4;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+        z-index: 1000;
+        transition: right 0.3s ease-in-out;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar.open {
+        right: 0;
+    }
+
+    .navbar-links {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 1.2rem 2rem;
+        font-size: 1.2rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-links:first-child {
+        margin-top: 60px;
+    }
+
+    .navbar-links:hover {
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar {
+        width: 80%;
+    }
+
+    .navbar-links {
+        font-size: 1.1rem;
+        padding: 1rem 1.5rem;
     }
 }

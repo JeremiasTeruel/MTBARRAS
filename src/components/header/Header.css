@@ -1,53 +1,133 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Itim&display=swap');
 
 header {
-    height: 21%;
-    width: 80vw;
+    height: auto;
+    padding: 1rem 2rem;
+    width: 90%;
+    max-width: 1200px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
-    margin-top: -6%;
-    z-index: 1;
-    border-bottom: 1px solid rgba(90, 90, 90, 0.418);
-    background: rgba(0, 0, 0, 0.3);
+    top: 1rem;
+    z-index: 100;
+    border: 1px solid rgba(90, 90, 90, 0.2);
+    background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(15px);
-    border-radius: 10px;
+    border-radius: 12px;
 
     font-family: "Itim", cursive;
     font-weight: 400;
     font-style: normal;
+
+    transition: all 0.3s ease-in-out;
 }
 
-.logo_h1_container{
+header.header-scrolled {
+    top: 0;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0 0 12px 12px;
+    width: 100%;
+    max-width: 100%;
+}
+
+header.header-scrolled .logo {
+    height: 50px;
+}
+
+header.header-scrolled h1 {
+    font-size: 1.2rem;
+}
+
+.logo_h1_container {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease-in-out;
 }
 
 .logo {
-    height: 20vh;
+    height: 80px;
+    transition: all 0.3s ease-in-out;
 }
 
+h1 {
+    font-size: 1.8rem;
+    transition: all 0.3s ease-in-out;
+}
 
-@media screen and (max-width: 600px) {
-    header{
-        width: 100vw;
-        background-color: #e4e4e4;
-        border: none;
-        left: 0;
-        position: absolute;
-        margin: 0;
+/* Tablet styles */
+@media screen and (max-width: 900px) {
+    header {
+        width: 95%;
+        padding: 0.8rem 1.5rem;
     }
 
-    header h1 {
-        font-size: 2rem;
+    .logo {
+        height: 60px;
     }
 
-    .logo_h1_container{
-        width: 100vw;
+    h1 {
+        font-size: 1.5rem;
     }
-    
+
+    header.header-scrolled .logo {
+        height: 45px;
+    }
+
+    header.header-scrolled h1 {
+        font-size: 1.1rem;
+    }
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+    header {
+        width: 100%;
+        top: 0;
+        border-radius: 0;
+        padding: 0.8rem 1rem;
+        justify-content: flex-start;
+    }
+
+    header.header-scrolled {
+        padding: 0.5rem 1rem;
+    }
+
+    .logo {
+        height: 50px;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    header.header-scrolled .logo {
+        height: 40px;
+    }
+
+    header.header-scrolled h1 {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo {
+        height: 45px;
+    }
+
+    h1 {
+        font-size: 1.1rem;
+    }
+
+    header.header-scrolled .logo {
+        height: 35px;
+    }
+
+    header.header-scrolled h1 {
+        font-size: 0.9rem;
+    }
 }
