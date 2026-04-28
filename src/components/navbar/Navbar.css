@@ -13,7 +13,11 @@ nav {
     font-weight: 500;
     font-style: normal;
     font-size: large;
-    transition: .5s;
+    transition: all 0.3s ease-in-out;
+}
+
+.header-scrolled .navbar-links {
+    font-size: 0.9rem;
 }
 
 .navbar-links:hover{

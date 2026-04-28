@@ -19,16 +19,40 @@ header {
     font-family: "Itim", cursive;
     font-weight: 400;
     font-style: normal;
+
+    transition: all 0.3s ease-in-out;
+}
+
+header.header-scrolled {
+    height: 10%;
+    margin-top: 0;
+    top: 0;
+    padding: 5px 20px;
+    border-radius: 0 0 10px 10px;
+}
+
+header.header-scrolled .logo {
+    height: 8vh;
+}
+
+header.header-scrolled h1 {
+    font-size: 1.2rem;
 }
 
 .logo_h1_container{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.3s ease-in-out;
 }
 
 .logo {
     height: 20vh;
+    transition: all 0.3s ease-in-out;
+}
+
+h1 {
+    transition: all 0.3s ease-in-out;
 }
 
 
