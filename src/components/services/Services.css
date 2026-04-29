@@ -34,7 +34,7 @@
     border-radius: 12px;
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
-    aspect-ratio: 4/3;
+    background-color: #f5f5f5;
 }
 
 .service_card:hover {
@@ -42,9 +42,9 @@
 }
 
 .card_img {
-    height: 100%;
     width: 100%;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
     border-radius: 12px;
 }
 
@@ -94,7 +94,8 @@
     }
 
     .service_card {
-        aspect-ratio: 16/10;
+        max-width: 400px;
+        margin: 0 auto;
     }
 
     .service_description {
