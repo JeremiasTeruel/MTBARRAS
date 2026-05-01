@@ -2,6 +2,8 @@ import './Navbar.css'
 import { useState } from 'react'
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
+import { BsInstagram, BsWhatsapp } from "react-icons/bs";
+import { FaFacebookF } from 'react-icons/fa';
 
 
 const pages = [
@@ -9,6 +11,12 @@ const pages = [
     {name: 'Servicios', href: '#services'},
     {name: 'Nosotros', href: '#aboutus'},
     {name: 'Contacto', href: '#contact'},
+];
+
+const socialLinks = [
+    { name: 'Instagram', href: 'https://www.instagram.com/mt_barras/', icon: BsInstagram },
+    { name: 'Facebook', href: 'https://www.facebook.com/mtbarras.moviles', icon: FaFacebookF },
+    { name: 'WhatsApp', href: 'https://wa.me/5492612304481', icon: BsWhatsapp },
 ];
 
 
@@ -39,6 +47,21 @@ export default function Navbar () {
                         </a>
                     )
                 }
+                <div className="navbar-social">
+                    {socialLinks.map(social => (
+                        <a 
+                            key={social.name} 
+                            href={social.href} 
+                            className='navbar-social-link' 
+                            target='_blank' 
+                            rel='noopener noreferrer'
+                            aria-label={social.name}
+                            onClick={closeMenu}
+                        >
+                            <social.icon />
+                        </a>
+                    ))}
+                </div>
             </nav>
         </>
     )

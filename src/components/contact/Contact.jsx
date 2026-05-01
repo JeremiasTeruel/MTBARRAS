@@ -2,6 +2,8 @@ import './Contact.css'
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser'
 import Swal from 'sweetalert2'
+import { BsInstagram, BsWhatsapp } from "react-icons/bs";
+import { FaFacebookF } from 'react-icons/fa'
 
 const Contact = () => {
 
@@ -44,13 +46,26 @@ const Contact = () => {
             <p>o dejanos un mensaje de agradecimiento o recomendación, tu opinión nos importa♥️</p>
         </div>
 
-        <form ref={form} onSubmit={sendEmail}>
-            <input type="text" name='name' placeholder='Nombre' required/>
-            <input type="text" name='lastName' placeholder='Apellido' required />
-            <input type="text" name='email' placeholder='Email' required/>
-            <textarea name="message" cols="30" rows="10" placeholder='Tu mensaje...' required></textarea>
-            <button type='submit' className='btn'>Enviar</button>
-        </form>
+        <div className='contact_form_wrapper'>
+            <div className='contact_socials'>
+                <a href='https://www.instagram.com/mt_barras/' className='contact_social_link' target='_blank' rel='noopener noreferrer' aria-label='Instagram'>
+                    <BsInstagram />
+                </a>
+                <a href='https://www.facebook.com/mtbarras.moviles' className='contact_social_link' target='_blank' rel='noopener noreferrer' aria-label='Facebook'>
+                    <FaFacebookF />
+                </a>
+                <a href='https://wa.me/5492612304481' className='contact_social_link' target='_blank' rel='noopener noreferrer' aria-label='WhatsApp'>
+                    <BsWhatsapp />
+                </a>
+            </div>
+            <form ref={form} onSubmit={sendEmail}>
+                <input type="text" name='fullName' placeholder='Nombre y Apellido' required/>
+                <input type="email" name='email' placeholder='Email' required/>
+                <input type="tel" name='phone' placeholder='Teléfono' required/>
+                <textarea name="message" cols="30" rows="10" placeholder='Tu mensaje...' required></textarea>
+                <button type='submit' className='btn'>Enviar</button>
+            </form>
+        </div>
     </section>
   )
 }
