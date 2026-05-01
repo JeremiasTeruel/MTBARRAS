@@ -46,19 +46,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: rgba(0, 0, 0, 0.1);
     color: #242424;
     transition: all 0.3s ease;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
 }
 
 .contact_social_link:hover {
-    background: #242424;
-    color: white;
-    transform: scale(1.1);
+    color: #000;
+    transform: scale(1.15);
 }
 
 .contact_container form {
@@ -154,9 +149,7 @@
     }
 
     .contact_social_link {
-        width: 40px;
-        height: 40px;
-        font-size: 1.1rem;
+        font-size: 1.5rem;
     }
 
     .contact_container form {
