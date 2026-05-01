@@ -38,7 +38,7 @@
 .contact_socials {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.8rem;
     padding-top: 0.5rem;
 }
 
@@ -145,7 +145,7 @@
     .contact_socials {
         flex-direction: row;
         padding-top: 0;
-        gap: 1.2rem;
+        gap: 2rem;
     }
 
     .contact_social_link {
